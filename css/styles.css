@@ -5,6 +5,7 @@
   --color-headings: #28283d;
   --color-text-dark: #87879d;
   --color-text-light: #fafafa;
+  --color-white: #ffffff;
   --color-light-blue: #8fe3f9;
   --color-accent-light: #d9b8ff;
 }
@@ -23,4 +24,20 @@ html {
 
 body {
   font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-text-dark);
+  line-height: 2.6;
+}
+
+/* Headings */
+h1 {
+  font-size: 6.4rem;
+  color: var(--color-headings);
+  line-height: 6.4;
+}
+
+h2 {
+  font-size: 4rem;
+  color: var(--color-headings);
+  line-height: 4.4;
 }
