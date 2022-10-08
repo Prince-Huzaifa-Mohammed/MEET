@@ -1,0 +1,26 @@
+:root {
+  /* Color palette */
+  --color-primary: #4d96a9;
+  --color-accent: #855fb1;
+  --color-headings: #28283d;
+  --color-text-dark: #87879d;
+  --color-text-light: #fafafa;
+  --color-light-blue: #8fe3f9;
+  --color-accent-light: #d9b8ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
