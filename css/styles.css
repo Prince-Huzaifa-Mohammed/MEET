@@ -1,13 +1,15 @@
 :root {
   /* Color palette */
   --color-primary: #4d96a9;
+  --color-primary-light: #71c0d4;
   --color-accent: #855fb1;
   --color-headings: #28283d;
   --color-text-dark: #87879d;
   --color-text-light: #fafafa;
   --color-white: #ffffff;
   --color-light-blue: #8fe3f9;
-  --color-accent-light: #d9b8ff;
+  --color-accent-light: #b18bdd;
+  --color-accent-text: #d9b8ff;
 }
 
 *,
@@ -26,7 +28,7 @@ body {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.6rem;
   color: var(--color-text-dark);
-  line-height: 2.6;
+  /* line-height: 2.6; */
 }
 
 /* Headings */
@@ -40,4 +42,60 @@ h2 {
   font-size: 4rem;
   color: var(--color-headings);
   line-height: 4.4;
+}
+
+/* Anchors */
+a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  display: inline-block;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn--primary:hover,
+btn--primary:active {
+  background-color: var(--color-primary-light);
+}
+
+.btn--accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn--accent:hover,
+.btn--accent:active {
+  background-color: var(--color-accent-light);
+}
+
+.btn--short {
+  padding: 1.6rem 2.5rem;
+}
+
+.btn--long {
+  padding: 1.6rem 4rem;
+}
+
+/* Text */
+.text-light-blue {
+  color: var(--color-light-blue);
+}
+
+.text-accent-light {
+  color: var(--color-accent-text);
 }
