@@ -28,7 +28,7 @@ body {
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.8rem;
   color: var(--color-text-dark);
-  /* line-height: 2.6; */
+  overflow-x: hidden;
 }
 
 /* Headings */
@@ -339,22 +339,30 @@ btn--primary:active {
 /* Header */
 .header {
   text-align: center;
-  /* max-width: 100%; */
 }
 
 /* Hero Section */
 .hero__content {
 }
 
-.hero-left__image {
-  margin-left: -3.3rem;
-  max-width: 303px;
+.hero-right__image {
+  background-image: url(../imgs/desktop/image-hero-right.png);
+  background-repeat: no-repeat;
+  margin-right: -3.5rem;
+  width: 394px;
 }
 
-.hero-right__image {
+.hero-left__image {
+  background-image: url(../imgs/desktop/image-hero-left.png);
+  background-repeat: no-repeat;
+  margin-left: -3.5rem;
+  width: 394px;
+}
+
+/* .hero-right__image {
   margin-right: -3.3rem;
   max-width: 303px;
-}
+} */
 
 .hero__heading {
   font-size: 6.4rem;
@@ -429,5 +437,216 @@ btn--primary:active {
   position: absolute;
   top: -11rem;
   left: 50%;
+  transform: translateX(-50%);
   z-index: 100;
+}
+
+/* Media Queries for tablets */
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 1.6rem;
+  }
+
+  .header {
+    /* padding: 60; */
+    margin: auto;
+    width: 100%;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .hero__image {
+    display: none;
+  }
+
+  .hero::before {
+    content: "";
+    background-image: url(../imgs/tablet/image-hero.png);
+    height: 303px;
+    width: 820px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 5rem;
+  }
+
+  .hero__heading {
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+
+  .hero__text {
+    padding: 0 8rem;
+  }
+
+  .btn--long {
+    padding: 2.4rem 4.8rem;
+  }
+
+  .btn--short {
+    padding: 2.4rem 3.6rem;
+  }
+
+  .image--gallery {
+    width: 689px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery__image {
+    width: 100%;
+  }
+
+  .functionality {
+    margin-top: 5rem;
+  }
+
+  .functionality__subheading {
+    margin-bottom: 3rem;
+  }
+
+  .functionality__text {
+    padding: 0;
+  }
+
+  .footer {
+    height: 428px;
+  }
+
+  .footer p {
+    font-size: 1.8rem;
+  }
+
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__text {
+    margin: 0;
+    text-align: center;
+    padding: 0 10rem;
+  }
+
+  .footer__left {
+    padding: 0 20rem;
+    text-align: center;
+  }
+}
+
+/* Media Queries for small phones */
+@media screen and (max-width: 375px) {
+  p {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  .hero__image {
+    display: none;
+  }
+
+  .hero::before {
+    content: "";
+    background-image: url(../imgs/tablet/image-hero.png);
+    height: 153px;
+    width: 414px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .hero__content {
+    margin-top: 2rem;
+  }
+
+  .hero__heading {
+    font-size: 4rem;
+    line-height: 4.4rem;
+    margin: 0;
+  }
+
+  .hero__text {
+    padding: 0;
+    width: 320px;
+    margin-top: 3rem;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .number-line__container {
+    margin-top: 6rem;
+  }
+
+  .image--gallery {
+    grid-template-columns: repeat(2, 1fr);
+    width: 327px;
+    gap: 2rem;
+  }
+
+  .functionality {
+    margin-bottom: 18rem;
+  }
+
+  .functionality__heading {
+    margin-top: 2.5rem;
+    letter-spacing: 4px;
+  }
+
+  .functionality__subheading {
+    font-size: 3.2rem;
+    padding: 0 3rem;
+    line-height: 3.6rem;
+  }
+
+  .functionality__text {
+    padding: 0 3rem;
+  }
+
+  .footer {
+    position: relative;
+    margin-top: 0;
+  }
+
+  .footer__content {
+    margin-bottom: 3rem;
+  }
+
+  .footer .number-line__container {
+    position: absolute;
+    top: -17rem;
+    /* right: 0; */
+  }
+
+  .footer__left {
+    padding: 0 2rem;
+    margin-top: 5rem;
+  }
+
+  .footer__text {
+    padding: 0 5rem;
+    margin-top: 0;
+  }
 }
